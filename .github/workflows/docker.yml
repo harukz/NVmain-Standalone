@@ -1,0 +1,22 @@
+name: Docker smoke test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  standalone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t nvmain-standalone .
+      - name: Run bundled sample
+        run: |
+          set -o pipefail
+          docker run --rm nvmain-standalone \
+            Config/STTRAM_Everspin_4GB.config \
+            examples/sample.nvt | tail -n 20

@@ -1,0 +1,11 @@
+.git
+.github
+build
+.sconsign.dblite
+nvmain.fast
+nvmain.debug
+nvmain.prof
+out.txt
+nohup.out
+__pycache__
+*.py[cod]
