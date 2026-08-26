@@ -46,6 +46,7 @@ class NVMAddress
 
     NVMAddress( uint64_t addrRow, uint64_t addrCol, uint64_t addrBank,
                 uint64_t addrRank, uint64_t addrChannel, uint64_t addrSA );
+    NVMAddress( const NVMAddress& m ) = default;
     
     void SetTranslatedAddress( uint64_t addrRow, uint64_t addrCol, uint64_t addrBank, 
                                uint64_t addrRank, uint64_t addrChannel, uint64_t addrSA );
