@@ -1,0 +1,12 @@
+# SCons output
+build/
+.sconsign.dblite
+nvmain.fast
+nvmain.debug
+nvmain.prof
+__pycache__/
+*.py[cod]
+
+# Runtime output
+out.txt
+nohup.out
