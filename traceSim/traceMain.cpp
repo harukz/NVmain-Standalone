@@ -88,10 +88,10 @@ int TraceMain::RunTrace( int argc, char *argv[] )
     uint64_t simulateCycles;
     uint64_t currentCycle;
     
-    if( argc < 4 )
+    if( argc < 3 )
     {
-        std::cout << "Usage: nvmain CONFIG_FILE TRACE_FILE CYCLES [PARAM=value ...]" 
-            << std::endl;
+        std::cout << "Usage: nvmain CONFIG_FILE TRACE_FILE [CYCLES [PARAM=value ...]]"
+                  << std::endl;
         return 1;
     }
 
@@ -328,5 +328,3 @@ bool TraceMain::RequestComplete( NVMainRequest* request )
 
     return true;
 }
-
-
